@@ -1,16 +1,57 @@
-# This is a sample Python script.
+def ex_1():
+    n = input("Enter n: ")
+    m = input("Enter m: ")
+    k = input("Enter k: ")
+    if n > m and n > k:
+        print("Max is n")
+    if m > n and m > k:
+        print("Max is m")
+    if k > n and k > m:
+        print("Max is k")
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+
+def ex_2():
+    n = input("Enter n: ")
+    m = input("Enter m: ")
+    print("Odd numbers between: ")
+    _get_odd_between(int(n), int(m))
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+def _get_odd_between(min_, max_):
+    i = min_ + 1
+    while i < max_:
+        isOdd = i % 2 != 0
+        if isOdd:
+            print(str(i))
+        i = i+1
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+def ex_3():
+    age = input("Enter your age: ")
+    _get_if_old(int(age))
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+def _get_if_old(age):
+    if age > 18:
+        print("Old enough")
+    else:
+        print("Not old enough")
+
+
+def ex_4():
+    i1 = input("Enter first integer: ")
+    i2 = input("Enter second integer: ")
+    operation = input("Enter operation - A-Add, S-Subtraction: ")
+    print("Result: ")
+    _execute_operation(i1, i2, operation);
+
+
+def _execute_operation(integer1, integer2, operation):
+    if operation == "A":
+        print(int(integer1)+int(integer2))
+    if operation == "S":
+        print(int(integer1)-int(integer2))
+
+
+
+ex_4()
